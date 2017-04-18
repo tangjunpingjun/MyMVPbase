@@ -81,7 +81,7 @@ public class FirstTopNewFragment extends BaseFragmentLazy implements ITopView , 
     @Override
     public void initView() {
         super.initView();
-        mSwipeRefresh.setColorSchemeResources(R.color.cardview_light_background,R.color.cardview_shadow_end_color);
+        mSwipeRefresh.setColorSchemeResources(R.color.cardview_shadow_end_color,R.color.colorAccent);
         mSwipeRefresh.setOnRefreshListener( this);
         mlayoutManager=new LinearLayoutManager(mContext);
         mRecyclerView.setLayoutManager(mlayoutManager);
@@ -190,6 +190,5 @@ public class FirstTopNewFragment extends BaseFragmentLazy implements ITopView , 
         mHasLoadedOnce=false;
         LogUtils.e("onDestroyView"+inttype);
         super.onDestroyView();
-
     }
 }
